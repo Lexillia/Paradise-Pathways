@@ -1,0 +1,40 @@
+.navtop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: grey;
+    overflow: hidden;
+   
+}
+
+.logo{
+    margin-left: 20px;
+}
+.navbar{
+    justify-content: space-between;
+    background-color: black;
+    overflow: hidden;
+}
+.navbar li{
+    display: inline-block;
+}
+.navbar a{
+    color: rgb(249, 249, 249);
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+.navbar a:hover{
+    background-color: rgb(127, 255, 144);
+    color: rgb(7, 81, 75);
+    padding: 10px;
+}
+
+.navbar a.active{
+    background-color: rgb(255, 233, 147);
+    color: black;
+
+}
+
+
