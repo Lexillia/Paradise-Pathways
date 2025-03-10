@@ -1,5 +1,6 @@
 *{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
 
 body{
@@ -20,13 +21,14 @@ body{
     margin-left: 20px;
 }
 
+/*navbar*/
 .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.nav-links {
+.navbar ul {
     gap: 8px;
     padding: 0;
 }
@@ -39,6 +41,7 @@ body{
     color: rgb(249, 249, 249);
     text-align: center;
     text-decoration: none;
+    padding: 16px 3px;
 }
 
 .navbar a:hover{
@@ -49,7 +52,7 @@ body{
 
 .navbar a.active{
     background-color: rgb(255, 233, 147);
-    padding: 16px 3px;
+    padding: 16px 5px;
     color: black;
 }
 
@@ -60,10 +63,9 @@ body{
     cursor: pointer;  
 }
 
-.searchbar input[type=text]{
+.searchbar input{
     padding: 3px;
     border-radius: 10px;
-    
 }
 
 .searchbar button{
@@ -95,11 +97,10 @@ body{
     transform: translate(-50%,-50%);
     color: rgb(236, 224, 3);
     background: rgba(0, 0, 0, 0.5);
-    border: 2px solid rgb(30, 255, 0);
+    border: 2px solid;
     border-radius: 20px;
     padding: 50px 10px;
-    width: 80%;
-    max-width: 500px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) , 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 @media(max-width: 600px){
@@ -112,30 +113,33 @@ body{
         flex-direction: column;
         position: absolute;
         background-color: black;
-        padding: 0px 10px;
-        top: 20px;
-        left: 10;
+        top: 30px;
+        left: 0;
+        width: 100%;
+        text-align: center;
         overflow: hidden;
         z-index: 1;
     }
 
-    .nav-links a:hover{
-        padding: 0px 10px;
-        width: 100%;
+    .nav-links a:hover {
+        padding: 10px 3px;
+        text-align: center;
     }
 
     .nav-links.active{
         display: flex;
+        
     }
 
     .nav-links li{
         display: block;
-        padding: 10px 0;
+        padding: 5px 0;
     }
 
     .menu-btn{
         display: block;
         background: none;
+        position: absolute;
         border: none;
         cursor: pointer; 
     }

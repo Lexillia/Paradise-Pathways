@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" 
+            content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="style.css">
+       <title>Paradise Pathways</title> 
+       <link rel="icon" href="img/Paradise Pathways Logo.png">
+    </head>
+
+    <body>
+        <header>
+            <div class="navtop">
+                <div class="logo">
+                    <a href="index.html"><img src="img/Paradise Pathways Logo.png" width="50px"></a>
+                </div>
+                <div class="navbar" id="navbar">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="package.html">Package</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a class="active" href="cart.html">Cart</a></li>
+                        <li><a></a></li>
+                    </ul>
+                    <button class="menu-btn"><img src="img/menubar.png" style="width: 25px;"></button>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">👨</button>
+                    <div class="dropdown-content">
+                        <a href="#">Sign In</a>
+                        <a href="#">Log In</a>
+                        <a href="#">Accounts</a>
+                    </div>
+                </div>
+            </div>  
+        </header>
+   
+    <nav class="tabs">
+        <a href="cart.html" class="active">Cart</a>
+        <a href="billing.html">Billing</a>
+    </nav>
+
+    <section class="cart">
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Description</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="product-placeholder.jpg"></td>
+                    <td>
+                        <p>Product Description</p>
+                        <button class="remove-btn">Remove</button>
+                    </td>
+                    <td>
+                        <button class="qty-btn">➖</button>
+                        <p>1</p>
+                        <button class="qty-btn">➕</button>
+                    </td>
+                    <td>
+                        <p>$XX.XX</p>
+                        <p>-$XX.XX</p>
+                        <p>$XX.XX</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="recommended">
+            <h3>Recommended</h3>
+            <div class="recommended-items">
+                <img src="product-placeholder.jpg">
+                <img src="product-placeholder.jpg">
+                <img src="product-placeholder.jpg">
+            </div>
+        </div>
+
+        <div class="checkout">
+            <h3>Subtotal</h3>
+            <p>$XX.XX</p>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </section>
+
+    <section class="past-purchases">
+        <h3>Past Purchases</h3>
+        <p>Nothing to see here...</p>
+    </section>
+
+    </body>        
+</html>   
