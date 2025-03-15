@@ -6,52 +6,71 @@
             content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="style.css">
        <title>Paradise Pathways</title> 
-       <link rel="icon" href="img/Paradise Pathways Logo.png">
+       <link rel="icon" href="img/icon.png">
     </head>
 
     <body>
         <header>
+            <!--header containing logo, navbar and dropdown menu for user options-->
             <div class="navtop">
                 <div class="logo">
                     <a href="index.html"><img src="img/Paradise Pathways Logo.png" width="50px"></a>
                 </div>
-                <div class="navbar">
-                    <ul>
+                <button class="menu-btn">&#8801;</button>
+
+                <div class="navbar" id="barNav">
+                    <ul class="nav-links">
                         <li><a href="index.html">Home</a></li>
-                        <li><a class="active" href="about.html">About Us</a></li>
+                        <li><a class="current" href="about.html">About Us</a></li>
                         <li><a href="package.html">Package</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="cart.html">Cart</a></li>
-                        <li><a></a></li>
+                        
+                        <li><div class="dropdown">
+                                <button class="dropbtn">User &#11206;</button>
+                            <div class="dropdown-content">
+                                <a href="#">Sign In</a>
+                                <a href="#">Log In</a>
+                                <a href="#">Accounts</a>  
+                            </div>
+                        </li> 
+                        </div>
                     </ul>
                 </div>
-                <div class="searchbar">
-                    <input type="text" placeholder="Search..">
-                    <button type="search"><img src="img/search.svg"></button>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn">👨</button>
-                    <div class="dropdown-content">
-                        <a href="#">Sign In</a>
-                        <a href="#">Log In</a>
-                        <a href="#">Accounts</a>
-                    </div>
-                </div>
-            </div>
-            
+            </div>  
         </header>
 
         <main class="content">
             <section class="intro">
-                <div class="about">
-                    <p>About Paradise Pathways. Lorem ipsum dolor sit 
-                        amet, consectetur adipiscing elit. Vivamus lacinia 
-                        odio vitae vestibulum vestibulum. 
-                    </p>
-                </div> 
-                <div>
-                    <img src="placeholder.jpg">
+                <h2>WELCOME TO PARADISE PATHWAYS - YOUR GETAWAY TO JAMAICA'S HIDDEN TRESURES!</h2>
+                
+                <div class="video-background">
+                    <iframe 
+                        src="https://www.youtube.com/embed/zqmk7B_bLt4?autoplay=1&mute=1&loop=1&playlist=zqmk7B_bLt4" 
+                        frameborder="0"
+                        allow="autoplay">
+                    </iframe>
                 </div>
+                
+                <div class="about">
+                        Discover the beauty, culture, and adventure of Jamaica with Paradise Pathways, your trusted travel agency for unforgettable island experiences. Whether you’re looking for all-inclusive resorts, private villa getaways, thrilling excursions, or customized tours, we make your dream vacation a reality.<br><br>
+
+                        🌴 Why Choose Us?<br><br>
+                        ✅ Expertly crafted itineraries tailored to your interests<br>
+                        ✅ Hassle-free bookings for hotels, transportation, and excursions<br>
+                        ✅ Local guides with insider knowledge of Jamaica’s best spots<br>
+                        ✅ Competitive prices for an authentic and luxurious experience<br><br>
+                        
+                        🏝 Our Services:<br><br>
+                        🚗 Airport Transfers & Private Transportation<br>
+                        🏖 Beach & Adventure Tours (Dunn’s River Falls, Blue Hole, Mystic Mountain & more!)<br>
+                        🍽 Culinary & Cultural Experiences<br>
+                        💍 Destination Weddings & Honeymoons<br><br>
+                        
+                        Let Paradise Pathways take you on a journey through the heart of Jamaica—where vibrant culture meets breathtaking landscapes.<br><br>
+                        
+                        📞 Contact us today to start planning your Caribbean escape!
+                </div> 
             </section>
 
             <section class="values">
@@ -60,8 +79,21 @@
                 </div>
                 <div class="val-goals">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae 
-                        vestibulum vestibulum. 
+                        🌟 Our Core Values<br><br>
+                        ✨ Authenticity – We showcase the true essence of Jamaica, from its vibrant culture to its hidden gems.<br>
+                        ✨ Excellence – We provide top-quality service, ensuring a smooth and enjoyable travel experience.<br>
+                        ✨ Customer-Centered Approach – Your happiness is our priority; we craft personalized experiences to match your unique desires.<br>
+                        ✨ Sustainability – We promote eco-friendly tourism and support local businesses to preserve Jamaica’s beauty.<br>
+                        ✨ Integrity & Trust – Transparency and honesty define how we operate, ensuring you feel safe and valued.<br><br>
+
+                        🎯 Our Goals<br><br>
+                        ✔ Create Memorable Experiences – We design vacations that leave a lasting impression, filled with adventure, relaxation, and cultural richness.<br>
+                        ✔ Support Local Communities – We work closely with Jamaican-owned businesses to contribute to the island’s growth.<br>
+                        ✔ Ensure Hassle-Free Travel – From seamless bookings to expert guidance, we make travel planning stress-free.<br>
+                        ✔ Expand Our Reach – We aim to become Jamaica’s go-to travel agency, welcoming visitors from all over the world.<br>
+                        ✔ Promote Sustainable Tourism – We encourage responsible travel that respects Jamaica’s environment and traditions.<br><br>
+
+                        Let Paradise Pathways be your trusted guide to experiencing the magic of Jamaica!
                     </p>
                 </div>
             </section>
@@ -72,15 +104,15 @@
                 </div>
                 <div class="team-members">
                     <div class="member">
-                        <img src="placeholder.jpg" alt="Aliahh">
+                        <img src="img/profile.jpg" alt="Aliahh">
                         <p>Introduction</p>
                     </div>
                     <div class="member">
-                        <img src="placeholder.jpg" alt="Gabrielle">
+                        <img src="img/profile.jpg" alt="Gabrielle">
                         <p>Introduction</p>
                     </div>
                     <div class="member">
-                        <img src="placeholder.jpg" alt="Daniel">
+                        <img src="img/profile.jpg" alt="Daniel">
                         <p>Introduction</p>
                     </div>
                 </div>
@@ -91,13 +123,104 @@
                     <h2>Frequently Asked Question</h2>
                 </div>
                 <div class="qna">
-                    <button class="question">Question 1</button>
-                    <div class="answer">Answer</div>
+                    <button class="question 1">What services does Paradise Pathways offer?
+                    </button>
+                    <div class="answer">
+                        <p>
+                            We provide complete travel planning services, including:<br>
+                            ✔ Flight & accommodation bookings<br>
+                            ✔ Airport transfers & private transportation<br>
+                            ✔ Guided tours & excursions<br>
+                            ✔ Customized vacation packages<br>
+                            ✔ Destination weddings & honeymoon planning<br>
+                        </p>
+                    </div> 
+
+                    <button class="question 2">Do you offer customized travel packages?</button>
+                    <div class="answer">
+                        <p>
+                            Yes! We specialize in personalized itineraries tailored to your interests, 
+                            budget, and schedule. Let us know what you’re looking for, and we’ll create 
+                            the perfect experience for you.
+                        </p>
+                    </div>
+                
+                    <button class="question 3">Can you arrange airport transfers?</button>
+                    <div class="answer">
+                        <p>
+                            Absolutely! We offer reliable and comfortable airport transfers to and from 
+                            your hotel, resort, or villa anywhere in Jamaica.
+                        </p>
+                    </div>
+                
+                    <button class="question 4">What are some must-visit attractions in Jamaica?</button>
+                    <div class="answer">
+                        <p>
+                            Some of our top recommendations include:<br>
+                            🏝 Dunn’s River Falls: Climb the famous waterfall in Ocho Rios.<br>
+                            🌊 Blue Hole: A hidden paradise with waterfalls and natural pools.<br>
+                            🚠 Mystic Mountain: Adventure park with zip-lining and bobsled rides.<br>
+                            🏖 Negril’s Seven Mile Beach: Relax on one of the Caribbean’s best beaches.<br>
+                            🍽 Local Food Tours: Taste authentic Jamaican dishes like jerk chicken and patties.
+
+                        </p>
+                    </div>
+                
+                    <button class="question 5">How do I book a tour or package?</button>
+                    <div class="answer">
+                        <p>
+                            Booking is easy! You can:<br>
+                            📞 Call us directly<br>
+                            📧 Email us with your request<br>
+                            💻 Use our online booking system on our website
+
+                        </p>
+                    </div>
+                
+                    <button class="question 6">Do you cater to special occasions like honeymoons or group trips?</button>
+                    <div class="answer">
+                        <p>
+                            Yes! Whether it’s a honeymoon, anniversary, family vacation, or a group getaway, 
+                            we’ll plan a seamless and unforgettable trip for you.
+                        </p>
+                    </div>
+                
+                    <button class="question 7">What payment options do you accept?</button>
+                    <div class="answer">
+                        <p>
+                            We accept major credit cards, PayPal, and bank transfers. Payment plans may be available for certain bookings.
+                        </p>
+                    </div>
+             
+                    <button class="question 8">Is Jamaica safe for tourists?</button>
+                    <div class="answer">
+                        <p>
+                            Yes, Jamaica is a popular tourist destination with welcoming locals. We prioritize your safety by working with trusted guides, drivers, and accommodations.
+                        </p>
+                    </div>
+                
+                    <button class="question 9">What should I pack for my trip to Jamaica?</button>
+                    <div class="answer">
+                        <p>
+                            🌞 Light, breathable clothing<br>
+                            🩴 Comfortable sandals or water shoes for excursions<br>
+                            🕶 Sunglasses & sunscreen<br>
+                            📸 Camera to capture the beautiful scenery<br>
+                            💵 Small cash for local vendors & tips
+
+                        </p>
+                    </div>
+                
+                    <button class="question 10">What is the best time to visit Jamaica?</button>
+                    <div class="answer">
+                        <p>
+                            Jamaica is great year-round! The peak travel season is from December to April, 
+                            with warm, sunny weather. For fewer crowds and better deals, visit between May 
+                            and November.
+                        </p>
+                    </div>
                 </div>
-                <div class="qna">
-                    <button class="question">Question 1</button>
-                    <div class="answer">Answer</div>
-                </div>
+
             </section>
 
             <section class="contact">

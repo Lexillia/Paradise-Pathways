@@ -6,139 +6,143 @@
             content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="style.css">
        <title>Paradise Pathways</title> 
-       <link rel="icon" href="img/Paradise Pathways Logo.png">
+       <link rel="icon" href="img\icon.png">
     </head>
 
     <body>
         <header>
+            <!--header containing logo, navbar and dropdown menu for user options-->
             <div class="navtop">
                 <div class="logo">
                     <a href="index.html"><img src="img/Paradise Pathways Logo.png" width="50px"></a>
                 </div>
-                <div class="navbar" id="navbar">
-                    <ul>
-                        <li><a class="active" href="index.html">Home</a></li>
+                <button class="menu-btn">&#8801;</button>
+
+                <nav class="navbar" id="barNav">
+                    <ul class="nav-links">
+                        <li><a class="current" href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="package.html">Package</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="cart.html">Cart</a></li>
-                        <li><a></a></li>
+                        
+                        <li><div class="dropdown">
+                                <button class="dropbtn">User &#11206;</button>
+                            <div class="dropdown-content">
+                                <a href="#">Sign In</a>
+                                <a href="#">Log In</a>
+                                <a href="#">Accounts</a>  
+                            </div>
+                        </li> 
                     </ul>
-                    <button class="menu-btn"><img src="img/menubar.png" style="width: 25px;"></button>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn">👨</button>
-                    <div class="dropdown-content">
-                        <a href="#">Sign In</a>
-                        <a href="#">Log In</a>
-                        <a href="#">Accounts</a>
-                    </div>
-                </div>
+                </nav>
             </div>  
         </header>
             
             <div class="hero">
                 <div class="hero-text">
-                    <h1>Discover Hidden Wonders of Jamaica</h1>
+                    <h1>Paradise Pathways</h1>
                     <p>Welcome paragraph</p>
-                    <button>Book Now</button>
+                    <button class="btn">Book Now</button>
                 </div>
             </div>
 
             <div class="site-content">
                 <script src="script.js"></script>
-                <section class="heading">
-                    <div>
-                        <h2>Featured Package</h2>
-                    </div>
-                </section>
 
+            <!--Featured package-->
                 <section class="featured">
+                    <h2 class="heading">Featured Package</h2>
                     <div class="feature-image">
                         <img src="img/dunns-river.jpg" style="width:100%" alt="Dunn's river falls">
-                        <button class="book-feature">Book Now</button>
-                    </div>
-                </section>
-
-                <section class="heading">
-                    <div>
-                        <h2>Top Packages</h2>
-                    </div>
-
-                    <div class="explore-more">
-                        <a href="#">Explore More -></a>
+                        <div class="feature-desc">
+                            <p> short description</p>
+                            <button class="btn">Book Now</button>
+                        </div>
                     </div>
                 </section>
 
                 <section class="top-packages">
-                    <div class="packages">
-                        <div class="package-gallery">
-                            <a href="img/1.jpg">
-                                <img src="img/1.jpg" alt="Package 1">
-                            </a>
-                            <div class="desc">Package Description</div>
-                        </div>
-                    </div>
-                    
-                    <div class="packages">
-                        <div class="package-gallery">
-                            <a href="img/2.jpg">
-                                <img src="img/2.jpg" alt="Package 2">
-                            </a>
-                            <div class="desc">Package Description</div>
-                        </div>
-                    </div>
+                    <div class="top-container">
+                        <h2 class="heading">Top Packages</h2>
+                        <div class="slide">
+                            <div class="packageSlide">
+                                <div class="numbertext">1 / 4</div>
+                                <img class="package-img" src="img/1.jpg" style="width:100%">
+                                <div class="desc">Description</div>
+                            </div>
+                        
+                            <div class="packageSlide">
+                                <div class="numbertext">2 / 4</div>
+                                <img class="package-img" src="img/2.jpg" style="width:100%">
+                                <div class="desc">Description</div>
+                            </div>
+                        
+                            <div class="packageSlide">
+                                <div class="numbertext">3 / 4</div>
+                                <img class="package-img" src="img/3.jpg" style="width:100%">
+                                <div class="desc">Description</div>
+                            </div>
+                        
+                            <div class="packageSlide">
+                                <div class="numbertext">4 / 4</div>
+                                <img class="package-img" src="img/4.jpg" style="width:100%">
+                                <div class="desc">Description</div>
+                            </div>
+                        
+                            <a class="prev">&#11164</a>
+                            <a class="next">&#11166</a>
 
-                    <div class="packages">
-                        <div class="package-gallery">
-                            <a href="img/3.jpg">
-                                <img src="img/3.jpg" alt="Package 3">
-                            </a>
-                            <div class="desc">Package Description</div>
+                        </div>
+                        
+                        <br>
+                        <div style="text-align:center">
+                        <span class="dot"></span> 
+                        <span class="dot"></span> 
+                        <span class="dot"></span> 
+                        <span class="dot"></span>
                         </div>
                     </div>
-
-                    <div class="packages">
-                        <div class="package-gallery">
-                            <a href="img/3.jpg">
-                                <img src="img/4.jpg" alt="Package 4">
-                            </a>
-                            <div class="desc">Package Description</div>
-                        </div>
-                    </div>
-                
                 </section>
+
+                <div class="explore-more">
+                    <a href="#">Explore More -></a>
+                </div>
 
                 <section class="heading">
                     <div>
                         <h2>Testimonials</h2>
                     </div>
-
-                    <div class="explore-more">
-                        <a href="#">Explore More -></a>
-                    </div>
                 </section>
+
+                <div class="explore-more">
+                    <a href="#">Explore More -></a>
+                </div>
 
                 <section class="testimonial"></section>
             </div>
         <footer>
-            <div class="newsletter">
-                <h3>Newsletter</h3>
-                <input type="text" placeholder="Email..">
+            <div class="topfooter">
+                <div class="newsletter">
+                    <h3>Newsletter</h3>
+                    <input type="text" placeholder="Email..">
+                </div>
+                <div class="site-map">
+                    <ul>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                    </ul>
+                </div>
+                <div class="social-media">
+                    <h3>Socials</h3>
+                    <img src="img/insta.png" alt="Instagram">
+                    <img src="img/fb.png" alt="Facebook">
+                    <img src="img/tt.png" alt="Tiktok">
+                </div>
             </div>
-            <div class="site-map">
-                <ul>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                </ul>
-            </div>
-            <div class="social-media">
-                <h3>Socials</h3>:</h3>
-                <img src="#" alt="Instagram">
-                <img src="#" alt="Facebook">
-                <img src="#" alt="X">
-            </div>
+
+            <div class="copyright"> &copy;All Rights Reserved</div>
         </footer>
     </body>
 </html>
