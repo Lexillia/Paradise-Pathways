@@ -6,34 +6,36 @@
             content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="style.css">
        <title>Paradise Pathways</title> 
-       <link rel="icon" href="img/Paradise Pathways Logo.png">
+       <link rel="icon" href="icon.png">
     </head>
 
     <body>
+        <script src="script.js"></script>
         <header>
+            <!--header containing logo, navbar and dropdown menu for user options-->
             <div class="navtop">
                 <div class="logo">
                     <a href="index.html"><img src="img/Paradise Pathways Logo.png" width="50px"></a>
                 </div>
-                <div class="navbar" id="navbar">
-                    <ul>
+                <button class="menu-btn">&#8801;</button>
+
+                <nav class="navbar" id="barNav">
+                    <ul class="nav-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="package.html">Package</a></li>
                         <li><a href="blog.html">Blog</a></li>
-                        <li><a class="active" href="cart.html">Cart</a></li>
-                        <li><a></a></li>
+                        <li><a class="current" href="cart.html">Cart</a></li>
+                        
+                        <li><div class="dropdown">
+                                <button class="dropbtn">User &#11206;</button>
+                            <div class="dropdown-content">
+                                <a href="sign-up.html">Sign In</a>
+                                <a href="login.html">Log In</a> 
+                            </div>
+                        </li> 
                     </ul>
-                    <button class="menu-btn"><img src="img/menubar.png" style="width: 25px;"></button>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn">👨</button>
-                    <div class="dropdown-content">
-                        <a href="#">Sign In</a>
-                        <a href="#">Log In</a>
-                        <a href="#">Accounts</a>
-                    </div>
-                </div>
+                </nav>
             </div>  
         </header>
    
@@ -89,10 +91,6 @@
         </div>
     </section>
 
-    <section class="past-purchases">
-        <h3>Past Purchases</h3>
-        <p>Nothing to see here...</p>
-    </section>
 
     </body>        
 </html>   

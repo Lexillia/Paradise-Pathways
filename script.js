@@ -1,60 +1,113 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const menuBtn = document.querySelector(".menu-btn");
-    const navLinks = document.querySelector(".nav-links");
+    let currentPage = window.location.pathname.split("/").pop().split("?")[0].split("#")[0];
 
-    menuBtn.addEventListener("click", function () {
-        navLinks.classList.toggle("active");
+    console.log("Current Page:", currentPage);
+    
+    /*** ✅ Global Functions (Runs on Every Page) ***/
+    function globalFunctions() {
+        console.log("Global scripts running...");
+        // Highlight active nav link
+        let menuBtn = document.querySelector(".menu-btn");
+        let navLinks = document.querySelector(".nav-links");
+
+        menuBtn.addEventListener("click", function () {
+            navLinks.classList.toggle("active");
     });
-});
 
+    }
 
-document.addEventListener("DOMContentLoaded", function() {
-  let slideIndex = 1;
-  showSlides(slideIndex);
+    /*** ✅ Page-Specific Scripts ***/
+    if (currentPage === "index.html" || currentPage === "") {
+        homePageScripts();
+    } 
+    else if (currentPage === "about.html") {
+        aboutPageScripts();
+    }
 
-  // Next/previous controls
-  function plusSlides(n) {
-      showSlides(slideIndex += n);
-  }
+    /*** ✅ Home Page Scripts ***/
+    function homePageScripts() {
+        console.log("Running scripts for Home Page...");
+        
+        let slideIndex = 1;
+        showSlides(slideIndex);
+      
+        // Next/Previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+      
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+      
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("packageSlide");
+            let dots = document.getElementsByClassName("dot");
+      
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+      
+            // Hide all slides
+            Array.from(slides).forEach(slide => slide.style.display = "none");
+      
+            // Remove active class from dots
+            Array.from(dots).forEach(dot => dot.classList.remove("active"));
+      
+            // Show the correct slide
+            slides[slideIndex - 1].style.display = "block";
+      
+            // Add active class to the correct dot
+            if (dots.length > 0) {
+                dots[slideIndex - 1].classList.add("active");
+            }
+        }
+      
+        // Event listeners for buttons (if they exist)
+        let prevButton = document.querySelector(".prev");
+        let nextButton = document.querySelector(".next");
 
-  // Thumbnail image controls
-  function currentSlide(n) {
-      showSlides(slideIndex = n);
-  }
+        if (prevButton) prevButton.addEventListener("click", () => plusSlides(-1));
+        if (nextButton) nextButton.addEventListener("click", () => plusSlides(1));
+      
+        // Event listeners for dots (if they exist)
+        document.querySelectorAll(".dot").forEach((dot, index) => {
+            dot.addEventListener("click", () => currentSlide(index + 1));
+        });
+    }
 
-  function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("packageSlide");
-      let dots = document.getElementsByClassName("dot");
+    /*** ✅ About Page Scripts (Accordion) ***/
+    function aboutPageScripts() {
+        console.log("Running scripts for About Page...");
+        
+        let questions = document.querySelectorAll(".question");
 
-      if (n > slides.length) { slideIndex = 1; }
-      if (n < 1) { slideIndex = slides.length; }
+        for (let i = 0; i < questions.length; i++){
+            questions[i].addEventListener("click", function() {
+                this.classList.toggle("active");
 
-      // Hide all slides
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
+                let answer = this.nextElementSibling;
 
-      // Remove active class from dots
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
+                // Close all other answers before opening a new one
+                document.querySelectorAll(".answer").forEach(a => {
+                    if (a !== answer) {
+                        a.classList.remove("open");
+                        a.style.maxHeight = null;
+                        a.previousElementSibling.classList.remove("active");
+                    }
+                });
 
-      // Show the correct slide
-      slides[slideIndex - 1].style.display = "block";
-
-      // Add active class to the correct dot
-      if (dots.length > 0) {
-          dots[slideIndex - 1].classList.add("active");
-      }
-  }
-
-  // Event listeners for buttons (Assuming they exist in your HTML)
-  document.querySelector(".prev").addEventListener("click", () => plusSlides(-1));
-  document.querySelector(".next").addEventListener("click", () => plusSlides(1));
-
-  // Event listeners for dots (if they exist)
-  document.querySelectorAll(".dot").forEach((dot, index) => {
-      dot.addEventListener("click", () => currentSlide(index + 1));
-  });
+                // Toggle the clicked answer
+                if (answer.style.maxHeight) {
+                    answer.style.maxHeight = null;
+                } 
+                else {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+            });
+        }
+    }
+    
+    // Run global functions
+    globalFunctions();
 });

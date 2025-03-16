@@ -6,44 +6,47 @@
             content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="style.css">
        <title>Paradise Pathways</title> 
-       <link rel="icon" href="img/Paradise Pathways Logo.png">
+       <link rel="icon" href="img/icon.png">
     </head>
 
 <body>
+    <script src="script.js"></script>
     <header>
+        <!--header containing logo, navbar and dropdown menu for user options-->
         <div class="navtop">
             <div class="logo">
                 <a href="index.html"><img src="img/Paradise Pathways Logo.png" width="50px"></a>
             </div>
-            <div class="navbar" id="navbar">
-                <ul>
+            <button class="menu-btn">&#8801;</button>
+
+            <nav class="navbar" id="barNav">
+                <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a class="active" href="package.html">Package</a></li>
+                    <li><a class="current" href="package.html">Package</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="cart.html">Cart</a></li>
-                    <li><a></a></li>
+                    
+                    <li><div class="dropdown">
+                            <button class="dropbtn">User &#11206;</button>
+                        <div class="dropdown-content">
+                            <a href="sign-up.html">Sign In</a>
+                            <a href="login.html">Log In</a> 
+                        </div>
+                    </li> 
                 </ul>
-                <button class="menu-btn"><img src="img/menubar.png" style="width: 25px;"></button>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">👨</button>
-                <div class="dropdown-content">
-                    <a href="#">Sign In</a>
-                    <a href="#">Log In</a>
-                    <a href="#">Accounts</a>
-                </div>
-            </div>
+            </nav>
         </div>  
     </header>
 
-    <section class="featured-package">
-        <div class="title">
-            <h2>Featured Package</h2>
-        </div>
-        <div>
-            <img src="placeholder.jpg">
-            <button>Book Now</button>
+    <section class="featured">
+        <h2 class="heading">Featured Package</h2>
+        <div class="feature-image">
+            <img src="img/dunns-river.jpg" style="width:100%" alt="Dunn's river falls">
+            <div class="feature-desc">
+                <p> short description</p>
+                <button class="btn">Book Now</button>
+            </div>
         </div>
     </section>
 
@@ -51,46 +54,47 @@
         <input type="text" placeholder="Search within page">
     </div>
 
-    <section>
-        <div class="sort">
+    <main class="content">
+        <aside class="sort">
             <h3>Sort</h3>
             <ul>
                 <li>By Parish</li>
-                <li> Group Packages</li>
+                <li>Group Packages</li>
                 <li>Individual Packages</li>
                 <li>Deals and Discounts</li>
             </ul>
-        </div>
-    </section>
+        </aside>
+    
 
-    <section>
-        <a href="package-builder.html">Build custom package -></a>
-        <div>
-            <div>
-                <img src="placeholder.jpg">
-                <p>Description</p>
+        <section class="packages">
+            <a href="package-builder.html">Build custom package -></a>
+            <div class="package-grid">
+                <div class="package-item">
+                    <img src="placeholder.jpg">
+                    <p>Description</p>
+                </div>
+                <div class="package-item">
+                    <img src="placeholder.jpg">
+                    <p>Description</p>
+                </div>
+                <div class="package-item">
+                    <img src="placeholder.jpg">
+                    <p>Description</p>
+                </div>
+                <div class="package-item">
+                    <img src="placeholder.jpg">
+                    <p>Description</p>
+                </div>
+                <div class="package-item">
+                    <img src="placeholder.jpg">
+                    <p>Description</p>
+                </div>
+                <div class="package-item">
+                    <img src="placeholder.jpg">
+                    <p>Description</p>
+                </div>
             </div>
-            <div>
-                <img src="placeholder.jpg">
-                <p>Description</p>
-            </div>
-            <div>
-                <img src="placeholder.jpg">
-                <p>Description</p>
-            </div>
-            <div>
-                <img src="placeholder.jpg">
-                <p>Description</p>
-            </div>
-            <div>
-                <img src="placeholder.jpg">
-                <p>Description</p>
-            </div>
-            <div>
-                <img src="placeholder.jpg">
-                <p>Description</p>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 </body>
 </html>

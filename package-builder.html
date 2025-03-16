@@ -6,35 +6,37 @@
             content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="style.css">
        <title>Paradise Pathways</title> 
-       <link rel="icon" href="img/Paradise Pathways Logo.png">
+       <link rel="icon" href="img/icon.png">
     </head>
 
 
 <body>
+    <script src="script.js"></script>
     <header>
+        <!--header containing logo, navbar and dropdown menu for user options-->
         <div class="navtop">
             <div class="logo">
                 <a href="index.html"><img src="img/Paradise Pathways Logo.png" width="50px"></a>
             </div>
-            <div class="navbar" id="navbar">
-                <ul>
+            <button class="menu-btn">&#8801;</button>
+
+            <nav class="navbar" id="barNav">
+                <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a class="active" href="package.html">Package</a></li>
+                    <li><a class="current" href="package.html">Package</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="cart.html">Cart</a></li>
-                    <li><a></a></li>
+                    
+                    <li><div class="dropdown">
+                            <button class="dropbtn">User &#11206;</button>
+                        <div class="dropdown-content">
+                            <a href="sign-up.html">Sign In</a>
+                            <a href="login.html">Log In</a> 
+                        </div>
+                    </li> 
                 </ul>
-                <button class="menu-btn"><img src="img/menubar.png" style="width: 25px;"></button>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">👨</button>
-                <div class="dropdown-content">
-                    <a href="#">Sign In</a>
-                    <a href="#">Log In</a>
-                    <a href="#">Accounts</a>
-                </div>
-            </div>
+            </nav>
         </div>  
     </header>
 
@@ -46,8 +48,8 @@
         </div>
     </section>
 
-    <section class="package-builder">
-        <div class="sort">
+    <main class="content1">
+        <aside class="sort">
             <h3>Sort</h3>
             <ul>
                 <li>By Parish</li>
@@ -55,39 +57,42 @@
                 <li>Individual Packages</li>
                 <li>Deals and Discounts</li>
             </ul>
-        </div>
-    </section>
+        </aside>
+    
 
-    <section class="package-container">
-        <div class="package-item">
-            <img src="package-placeholder.jpg">
-            <p>Description</p>
-        </div>
-        <div class="package-item">
-            <img src="package-placeholder.jpg">
-            <p>Description</p>
-        </div>
-        <div class="package-item">
-            <img src="package-placeholder.jpg">
-            <p>Description</p>
-        </div>
-        <div class="package-item">
-            <img src="package-placeholder.jpg">
-            <p>Description</p>
-    </section>
+        <section class="packages1">
+            <div class="package-grid1">
+                <div class="package-item">
+                    <img src="package-placeholder.jpg">
+                    <p>Description</p>
+                </div>
+                <div class="package-item">
+                    <img src="package-placeholder.jpg">
+                    <p>Description</p>
+                </div>
+                <div class="package-item">
+                    <img src="package-placeholder.jpg">
+                    <p>Description</p>
+                </div>
+                <div class="package-item">
+                    <img src="package-placeholder.jpg">
+                    <p>Description</p>
+            </div>
+        </section>
 
-    <section class="cart">
-        <h3>Product</h3>
-        <ul>
-            <li>Item 1 ----- $XX.XX</li>
-            <li>Item 2 ----- $XX.XX</li>
-            <li>Item 3 ----- $XX.XX</li>
-        </ul>
-        <p>Total: ----- $XX.XX</p>
-        <p>Discount: - $XX.XX</p>
-        <p>Subtotal: - $XX.XX</p>
-        <button class="checkout-btn">Check-Out</button>
-    </section>
+        <aside class="cart">
+            <h3>Product</h3>
+            <ul>
+                <li>Item 1 ----- $XX.XX</li>
+                <li>Item 2 ----- $XX.XX</li>
+                <li>Item 3 ----- $XX.XX</li>
+            </ul>
+            <p>Total: ----- $XX.XX</p>
+            <p>Discount: - $XX.XX</p>
+            <p>Subtotal: - $XX.XX</p>
+            <button class="checkout-btn">Check-Out</button>
+        </aside>
+    </main>
 
 </body>
 </html>
