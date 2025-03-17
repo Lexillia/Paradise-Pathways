@@ -14,6 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
             navLinks.classList.toggle("active");
     });
 
+    
+    
+
     }
 
     /*** ✅ Page-Specific Scripts ***/

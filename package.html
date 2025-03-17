@@ -7,94 +7,131 @@
             <link rel="stylesheet" href="style.css">
        <title>Paradise Pathways</title> 
        <link rel="icon" href="img/icon.png">
+       <style>
+            .main-container {
+                height: 100%;
+                width: 90%;
+                margin: auto;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .packages {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+                margin-top: 20px;
+            }
+            .package {
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+            .package img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+            .package h3 {
+                margin: 10px 0;
+            }
+            .package p {
+                color: #555;
+            }
+    
+        </style>
     </head>
 
-<body>
-    <script src="script.js"></script>
-    <header>
-        <!--header containing logo, navbar and dropdown menu for user options-->
-        <div class="navtop">
-            <div class="logo">
-                <a href="index.html"><img src="img/Paradise Pathways Logo.png" width="50px"></a>
-            </div>
-            <button class="menu-btn">&#8801;</button>
-
-            <nav class="navbar" id="barNav">
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a class="current" href="package.html">Package</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-                    
-                    <li><div class="dropdown">
-                            <button class="dropbtn">User &#11206;</button>
-                        <div class="dropdown-content">
-                            <a href="sign-up.html">Sign In</a>
-                            <a href="login.html">Log In</a> 
-                        </div>
-                    </li> 
-                </ul>
-            </nav>
-        </div>  
-    </header>
-
-    <section class="featured">
-        <h2 class="heading">Featured Package</h2>
-        <div class="feature-image">
-            <img src="img/dunns-river.jpg" style="width:100%" alt="Dunn's river falls">
-            <div class="feature-desc">
-                <p> short description</p>
-                <button class="btn">Book Now</button>
-            </div>
-        </div>
-    </section>
-
-    <div class="search">
-        <input type="text" placeholder="Search within page">
-    </div>
-
-    <main class="content">
-        <aside class="sort">
-            <h3>Sort</h3>
-            <ul>
-                <li>By Parish</li>
-                <li>Group Packages</li>
-                <li>Individual Packages</li>
-                <li>Deals and Discounts</li>
-            </ul>
-        </aside>
-    
-
-        <section class="packages">
-            <a href="package-builder.html">Build custom package -></a>
-            <div class="package-grid">
-                <div class="package-item">
-                    <img src="placeholder.jpg">
-                    <p>Description</p>
+    <body>
+        <script src="script.js"></script>
+        <header>
+            <!--header containing logo, navbar and dropdown menu for user options-->
+            <div class="navtop">
+                <div class="logo">
+                    <a href="index.html"><img src="img/Paradise Pathways Logo.png" width="50px"></a>
                 </div>
-                <div class="package-item">
-                    <img src="placeholder.jpg">
-                    <p>Description</p>
+                <button class="menu-btn">&#8801;</button>
+
+                <nav class="navbar" id="barNav">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a class="current" href="package.html">Package</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        
+                        <li><div class="dropdown">
+                                <button class="dropbtn">User &#11206;</button>
+                            <div class="dropdown-content">
+                                <a href="sign-up.html">Sign In</a>
+                                <a href="login.html">Log In</a> 
+                            </div>
+                        </li> 
+                    </ul>
+                </nav>
+            </div>  
+        </header>
+
+        <title>Travel Packages | Paradise Pathways</title>
+
+        <main class="main-container">
+            <h2>🌴 Our Travel Packages 🌴</h2>
+            <div class="packages">
+                <div class="package">
+                    <img src="img/transfer.jpg" alt="Airport Transfers">
+                    <h3>🚗 Airport Transfers</h3>
+                    <p>Reliable and comfortable private transportation.</p>
+                    <p><strong>$5,000 per trip</strong></p>
+                    <button class="btn" onclick="addToCart('Airport Transfers', 5000)">Add to Cart</button>
                 </div>
-                <div class="package-item">
-                    <img src="placeholder.jpg">
-                    <p>Description</p>
+                <div class="package">
+                    <img src="img/beach.jpg"Beach Tours">
+                    <h3>🏖 Beach & Adventure Tours</h3>
+                    <p>Experience Jamaica’s top beaches & attractions.</p>
+                    <p><strong>$12,000 per person</strong></p>
+                    <button class="btn" onclick="addToCart('Beach & Adventure Tour', 12000)">Add to Cart</button>
                 </div>
-                <div class="package-item">
-                    <img src="placeholder.jpg">
-                    <p>Description</p>
+                <div class="package">
+                    <img src="img/jerk.jpg" alt="Food Tour">
+                    <h3>🍽 Culinary & Cultural Tours</h3>
+                    <p>Taste authentic Jamaican dishes & explore the culture.</p>
+                    <p><strong>$7,500 per person</strong></p>
+                    <button class="btn" onclick="addToCart('Culinary & Cultural Tour', 7500)">Add to Cart</button>
                 </div>
-                <div class="package-item">
-                    <img src="placeholder.jpg">
-                    <p>Description</p>
-                </div>
-                <div class="package-item">
-                    <img src="placeholder.jpg">
-                    <p>Description</p>
+                <div class="package">
+                    <img src="img/wedding.jpg" alt="Weddings">
+                    <h3>💍 Destination Weddings & Honeymoons</h3>
+                    <p>Plan your dream wedding or honeymoon in Jamaica.</p>
+                    <p><strong>Contact for Pricing</strong></p>
+                    <button class="btn" onclick="addToCart('Wedding', )">Learn More</button>
                 </div>
             </div>
-        </section>
-    </main>
-</body>
+        </main>
+
+        <footer>
+            <div class="topfooter">
+                <div class="social-media">
+                    <h3>Socials</h3>
+                    <a href="https://www.instagram.com/"><img src="img/insta.png" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/"><img src="img/fb.png" alt="Facebook"></a>
+                    <a href="https://www.tiktok.com/"><img src="img/tt.png" alt="Tiktok"></a> 
+                </div>
+            </div>
+
+            <div class="copyright"> &copy;All Rights Reserved</div>
+        </footer>
+
+        <script>
+            function addToCart(packageName, price) {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                cart.push({ name: packageName, price: price, quantity: 1 });
+                localStorage.setItem("cart", JSON.stringify(cart));
+                alert(packageName + " added to cart!");
+            }
+        </script>
+
+    </body>
 </html>
