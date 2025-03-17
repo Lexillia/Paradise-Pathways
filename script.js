@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     console.log("Current Page:", currentPage);
     
-    /*** ✅ Global Functions (Runs on Every Page) ***/
+    // Global Functions (Runs on Every Page) //
     function globalFunctions() {
         console.log("Global scripts running...");
         // Highlight active nav link
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-    /*** ✅ Page-Specific Scripts ***/
+    //Page-Specific Scripts //
     if (currentPage === "index.html" || currentPage === "") {
         homePageScripts();
     } 
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         aboutPageScripts();
     }
 
-    /*** ✅ Home Page Scripts ***/
+    //Home Page Scripts //
     function homePageScripts() {
         console.log("Running scripts for Home Page...");
         
@@ -54,32 +54,24 @@ document.addEventListener("DOMContentLoaded", function () {
             // Hide all slides
             Array.from(slides).forEach(slide => slide.style.display = "none");
       
-            // Remove active class from dots
-            Array.from(dots).forEach(dot => dot.classList.remove("active"));
-      
             // Show the correct slide
             slides[slideIndex - 1].style.display = "block";
       
-            // Add active class to the correct dot
-            if (dots.length > 0) {
-                dots[slideIndex - 1].classList.add("active");
-            }
         }
       
-        // Event listeners for buttons (if they exist)
+        // Event listeners for buttons and dots//
         let prevButton = document.querySelector(".prev");
         let nextButton = document.querySelector(".next");
 
         if (prevButton) prevButton.addEventListener("click", () => plusSlides(-1));
         if (nextButton) nextButton.addEventListener("click", () => plusSlides(1));
       
-        // Event listeners for dots (if they exist)
         document.querySelectorAll(".dot").forEach((dot, index) => {
             dot.addEventListener("click", () => currentSlide(index + 1));
         });
     }
 
-    /*** ✅ About Page Scripts (Accordion) ***/
+    //About Page Scripts (Accordion)//
     function aboutPageScripts() {
         console.log("Running scripts for About Page...");
         

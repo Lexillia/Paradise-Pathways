@@ -11,8 +11,8 @@
        <style>
             .main-container {
                 height: 100vh;
-                width: 80%;
-                margin: 0;
+                width: 100%;
+                margin: auto;
                 padding: 20px;
             }
             h2 {
@@ -20,6 +20,7 @@
                 color: #333;
             }
             table {
+                table-layout: fixed;
                 width: 100%;
                 border-collapse: collapse;
                 background: white;
@@ -33,28 +34,36 @@
                 text-align: center;
             }
             th {
-                background: #007bff;
+                background: #000000;
                 color: white;
             }
-            .btn {
-                padding: 8px 12px;
-                font-size: 14px;
+    
+            .remove-btn {
+                width: 25px;
+                height: 30px;
+                background-image: url(
+                    'img/trash\ closed.png');
+                background-color: white;
+                background-position: center;
+                background-size: cover;
                 border: none;
                 cursor: pointer;
-                border-radius: 5px;
             }
-            .remove-btn {
-                background: #dc3545;
-                color: white;
+
+            .remove-btn:hover{
+                background-image: url(
+                    'img/trash\ opened.png');
             }
+
             .checkout-btn {
                 display: block;
                 width: 100%;
                 text-align: center;
-                background: #007bff;
+                background: #000000;
                 color: white;
                 padding: 12px;
                 font-size: 16px;
+                margin: auto;
                 margin-top: 20px;
                 border-radius: 5px;
                 text-decoration: none;
@@ -71,7 +80,7 @@
                 padding: 5px 10px;
                 font-size: 16px;
                 border: none;
-                background: #007bff;
+                background: #000000;
                 color: white;
                 cursor: pointer;
                 border-radius: 5px;
@@ -90,6 +99,34 @@
                 border-radius: 10px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 margin-top: 20px;
+            }
+
+            @media(max-width: 650px){
+              .main-container{
+                padding: 0;
+                font-size: 15px;
+                
+              }  
+
+              .quantity-controls button{
+                padding: 0;
+                font-size: 20px;
+                border: none;
+                background: none;
+                color: rgb(0, 0, 0);
+                cursor: pointer;
+                border-radius: 5px;
+              }
+
+              .quantity-controls button:hover{
+                color: #0056b3;
+              }
+
+              .quantity-controls input{
+                width: 30px;
+                padding: 5px 5px;
+                font-size: 15px;
+              }
             }
         </style>
     </head>
@@ -140,6 +177,7 @@
                     <tr><td colspan="5">Your cart is empty.</td></tr>
                 </tbody>
             </table>
+
             <a href="#" class="checkout-btn" onclick="checkout()">Proceed to Checkout</a>
             <div id="bill"></div>
         </main>
@@ -182,7 +220,10 @@
                             </div>
                         </td>
                         <td>$${total}</td>
-                        <td><button class="btn remove-btn" onclick="removeFromCart(${index})">Remove</button></td>
+                        <td>
+                            <button class="remove-btn" onclick="removeFromCart(${index})"></button>
+                            
+                            </td>
                     `;
                     cartContainer.appendChild(row);
                 });
