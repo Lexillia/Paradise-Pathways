@@ -1,27 +1,50 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" 
-            content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" href="style.css">
-       <title>Paradise Pathways</title> 
-       <link rel="icon" href="img/icon.png">
-       <style>
-        
-       </style>
-    </head>
-
-    <body>
-        <div class="form-container">
-            <h3>Forgot Password</h3>
-            <form>
-                <label>Email:</label>
-                <input type="email" required>
-    
-                <button class="form-button" type="submit">Reset</button>
-                <p>Remember Password? <a href="login.html">Log in</a></p>
-            </form>
-        </div>
-    </body> 
-</html>      
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Paradise Pathways</title>
+  <link rel="icon" href="img/icon.png">
+</head>
+<body>
+  <header>
+  <script src="script.js"></script>
+  <header>
+    <div class="navtop">
+      <div class="logo">
+        <a href="index.html"><img src="img/Paradise Pathways Logo.png" width="50px"></a>
+      </div>
+      <button class="menu-btn">&#8801;</button>
+      <nav class="navbar" id="barNav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="package.html">Package</a></li>
+          <li><a class="current" href="blog.html">Blog</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li>
+            <div class="dropdown">
+              <button class="dropbtn">User &#11206;</button>
+              <div class="dropdown-content">
+                <a href="sign-up.html">Sign Up</a>
+                <a href="login.html">Log In</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="form-container">
+    <p class="welcome-text">Dear valued customer, if you've forgotten your password, please use this form to reset it. Simply enter your email address associated with your account, and we'll send you instructions to create a new password. Your information is confidential and secure.</p>
+    <h3>Forgot Password</h3>
+    <form>
+      <label>Email:</label>
+      <input type="email" required>
+      <button class="form-button" type="submit">Reset</button>
+      <p>Remember Password? <a href="login.html">Log in</a></p>
+    </form>
+  </div>
+</body>
+</html>
