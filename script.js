@@ -106,3 +106,29 @@ document.addEventListener("DOMContentLoaded", function () {
     // Run global functions
     globalFunctions();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const h2Tags = document.querySelectorAll('h2');
+
+  window.addEventListener('scroll', () => {
+    h2Tags.forEach((h2) => {
+      const rect = h2.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        h2.classList.add('h2-animate');
+      }
+    });
+  });
+});
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const h3Tags = document.querySelectorAll('h3');
+  
+    window.addEventListener('scroll', () => {
+      h3Tags.forEach((h2) => {
+        const rect = h2.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+          h2.classList.add('h3-animate');
+        }
+      });
+    });
+  });
