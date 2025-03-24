@@ -1,44 +1,66 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" 
-            content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" href="style.css">
-       <title>Paradise Pathways</title> 
-       <link rel="icon" href="img/icon.png">
-    </head>
-
-    <body>
-
-        <div class="form-container">
-            <h3>Sign Up</h3>
-            <form>
-                <div class="name-fields">
-                    <div>
-                        <label>First Name:</label>
-                        <input type="text" required>
-                    </div>
-                    <div>
-                        <label>Last Name:</label>
-                        <input type="text" required>
-                    </div>
-                </div>
-    
-                <label>Username:</label>
-                <input type="text" required>
-    
-                <label>Email:</label>
-                <input type="email" required>
-    
-                <label>Password:</label>
-                <input type="password" required>
-    
-                <p class="terms">By signing up you agree to our <a href="#">TOS</a> and <a href="#">privacy policy</a></p>
-                
-                <button class="form-button" type="submit">Sign Up</button>
-                <p>Have an account? <a href="login.html">Log in</a></p>
-            </form>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Paradise Pathways</title>
+  <link rel="icon" href="img/icon.png">
+</head>
+<body>
+ 
+  <script src="script.js"></script> 
+  <header>
+    <div class="navtop">
+      <div class="logo">
+        <a href="index.html"><img src="img/Paradise Pathways Logo.png" width="50px"></a>
+      </div>
+      <button class="menu-btn">&#8801;</button>
+      <nav class="navbar" id="barNav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="package.html">Package</a></li>
+          <li><a class="current" href="blog.html">Blog</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li>
+            <div class="dropdown">
+              <button class="dropbtn">User &#11206;</button>
+              <div class="dropdown-content">
+                <a href="sign-up.html">Sign Up</a>
+                <a href="login.html">Log In</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="form-container">
+    <p class="welcome-text">Welcome to Paradise Pathways! If you don't have an account with us, please use this form to sign up. By creating an account, you'll be able to access exclusive features and benefits. Your information is confidential and secure.</p>
+    <h3>Sign Up</h3>
+    <form>
+      <div class="name-fields">
+        <div>
+          <label>First Name:</label>
+          <input type="text" required>
         </div>
-    </body> 
-</html>      
+        <div>
+          <label>Last Name:</label>
+          <input type="text" required>
+        </div>
+      </div>
+      <label>Username:</label>
+      <input type="text" required>
+      <label>Email:</label>
+      <input type="email" required>
+      <label>Password:</label>
+      <input type="password" required>
+      <p class="terms">By signing up you agree to our <a href="#">TOS</a> and <a href="#">privacy policy</a></p>
+      <button class="form-button" type="submit">Sign Up</button>
+      <p>Have an account? <a href="login.html">Log in</a></p>
+    </form>
+  </div>
+</body>
+</html>
+
