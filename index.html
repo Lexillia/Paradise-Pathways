@@ -10,15 +10,6 @@
     </head>
 
     <body>
-        <script src="script.js"></script>
-        <script>
-            function addToCart(packageName, price) {
-                let cart = JSON.parse(localStorage.getItem("cart")) || [];
-                cart.push({ name: packageName, price: price, quantity: 1 });
-                localStorage.setItem("cart", JSON.stringify(cart));
-                alert(packageName + " added to cart!");
-            }
-        </script>
         <header>
             <!--header containing logo, navbar and dropdown menu for user options-->
             <div class="navtop">
@@ -38,7 +29,7 @@
                         <li><div class="dropdown">
                                 <button class="dropbtn">User &#11206;</button>
                             <div class="dropdown-content">
-                                <a href="sign-up.html">Sign In</a>
+                                <a href="sign-up.html">Sign Up</a>
                                 <a href="login.html">Log In</a> 
                             </div>
                         </li> 
@@ -49,12 +40,12 @@
         <main class="main-content">  
             <div class="hero">
                 <div class="hero-text">
-                    <h1>Paradise Pathways</h1>
-                    <h2>Discover Hidden Wonders of Jamaica</h2>
-                    <p>Welcome to Paradise Pathways, your gateway to the breathtaking beauty of Jamaica! Explore hidden gems, 
+                    <h1 id="h1ani">Paradise Pathways</h1>
+                    <h2 id="subhani">Discover Hidden Wonders of Jamaica</h2>
+                    <p id="herop">Welcome to Paradise Pathways, your gateway to the breathtaking beauty of Jamaica! <br>Explore hidden gems, 
                         relax on pristine beaches, and embark on unforgettable adventures.<br>
                         Whether you're looking for a serene escape or an action-packed getaway, 
-                        we have the perfect package for you. Let us take you on a journey where 
+                        we have the perfect package for you.<br> Let us take you on a journey where 
                         paradise awaits at every turn!</p>
                         <a href="package.html"><button class="btn">Book Now</button></a>
                 </div>
@@ -63,114 +54,112 @@
             <div class="site-content">
 
             <!--Featured package-->
-                <section class="featured">
-                    <h2 class="heading">Featured Package</h2>
-                    <div>
-                        <img class="feature-image" src="img/dunns-river.jpg"  alt="Dunn's river falls">
-                        <div class="feature-desc">
-                            <h4>Climb the Falls</h4>
-                            <p>Climb and play in the breathtaking Duns River Falls,
-                                one of Jamaica's most stunning natural wonders. <br>
-                            </p>
-                            <button class="btn" onclick="addToCart('Dunn\'s River Tour', 6000)">Book Now</button>
-                        </div>
+            <section class="featured">
+                <h2 class="heading">Featured Package</h2>
+                <div>
+                    <img class="feature-image" src="img/dunns-river.jpg"  alt="Dunn's river falls">
+                    <div class="feature-desc">
+                        <h4>Climb the Falls</h4>
+                        <p>Climb and play in the breathtaking Duns River Falls,
+                            one of Jamaica's most stunning natural wonders. <br>
+                        </p>
+                        <button class="btn" onclick="addToCart('Dunn\'s River Tour', 6000)">Book Now</button>
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <section class="top-packages">
-                    <div class="top-container">
-                        <h2 class="heading">Top Packages</h2>
-                        <div class="slide">
-                            <div class="packageSlide">
-                                <div class="numbertext">1 / 4</div>
-                                <img class="package-img" src="img/1.jpg" style="width:100%">
-                                <div class="desc">
-                                    <h4>Golf Jamaican Style</h4>
-                                    <p>Unwind on Jamaica's world-class golf courses surrounded by 
-                                        lush tropical landscapes.<br>
-                                        Price: $25,000 JMD
-                                    </p>
-                                    <button class="btn" onclick="addToCart('Golf Jamaican Style', 25000)">Book Now</button>
-                                </div>
-                            </div>
-                        
-                            <div class="packageSlide">
-                                <div class="numbertext">2 / 4</div>
-                                <img class="package-img" src="img/2.jpg" style="width:100%">
-                                <div class="desc">
-                                    <h4>Reef Explorer</h4>
-                                    <p>Discover Jamaica's vibrant coral reefs and marine life 
-                                        on an unforgettable snorkelling adventure.<br>
-                                        Price: $35,000 JMD</p>
-                                        <button class="btn" onclick="addToCart('Reef Explorer', 35000)">Book Now</button>
-                                </div>
-                            </div>
-                        
-                            <div class="packageSlide">
-                                <div class="numbertext">3 / 4</div>
-                                <img class="package-img" src="img/3.jpg" style="width:100%">
-                                <div class="desc">
-                                    <h4>Island Breeze</h4>
-                                    <p>Sail across Jamaica's crystal-clear waters and enjoy breathtaking 
-                                        views of the coastline.<br>
-                                        Price: $40,000 JMD
-                                    </p>
-                                    <button class="btn" onclick="addToCart('Island Breeze', 40000)">Book Now</button>
-                                </div>
-                                
-                            </div>
-                        
-                            <div class="packageSlide">
-                                <div class="numbertext">4 / 4</div>
-                                <img class="package-img" src="img/4.jpg" style="width:100%">
-                                <div class="desc">
-                                    <h4>Jamaican Oasis</h4>
-                                    <p>Hike to majestic waterfalls and swim in natural pools surrounded by 
-                                        lush tropical vegetation.<br>
-                                        Price: $45,000 JMD
-                                    </p> 
-                                    <button class="btn" onclick="addToCart('Jamaican Oasis', 45000)">Book Now</button>
-                                </div>
-                            </div>
-                        
-                            <a class="prev">&#11164</a>
-                            <a class="next">&#11166</a>
+            <div class="site-toppkg">
 
+                <!--Top package-->
+            <section class="top-packages">
+                <div class="top-container">
+                    <h2 class="heading">Top Packages</h2>
+                    <div class="slide">
+                        <div class="packageSlide">
+                            <div class="numbertext">1 / 4</div>
+                            <img class="package-img" src="img/1.jpg" style="width:100%">
+                            <div class="desc">
+                                <h4>Golf Jamaican Style</h4>
+                                <p>Unwind on Jamaica's world-class golf courses surrounded by 
+                                    lush tropical landscapes.<br>
+                                    Price: $25,000 JMD
+                                </p>
+                                <button class="btn" onclick="addToCart('Golf Jamaican Style', 25000)">Book Now</button>
+                            </div>
                         </div>
-                        
-                        <br>
-                        <div style="text-align:center">
-                        <span class="dot"></span> 
-                        <span class="dot"></span> 
-                        <span class="dot"></span> 
-                        <span class="dot"></span>
+                    </section> 
+                     <!--Package slide-->
+            <section class="package-sli">
+                        <div class="packageSlide">
+                            <div class="numbertext">2 / 4</div>
+                            <img class="package-img" src="img/2.jpg" style="width:100%">
+                            <div class="desc">
+                                <h4>Reef Explorer</h4>
+                                <p>Discover Jamaica's vibrant coral reefs and marine life 
+                                    on an unforgettable snorkelling adventure.<br>
+                                    Price: $35,000 JMD</p>
+                                    <button class="btn" onclick="addToCart('Reef Explorer', 35000)">Book Now</button>
+                            </div>
                         </div>
+                        </section> 
+                        <div class="packageSlide">
+                            <div class="numbertext">3 / 4</div>
+                            <img class="package-img" src="img/3.jpg" style="width:100%">
+                            <div class="desc">
+                                <h4>Island Breeze</h4>
+                                <p>Sail across Jamaica's crystal-clear waters and enjoy breathtaking 
+                                    views of the coastline.<br>
+                                    Price: $40,000 JMD
+                                </p>
+                                <button class="btn" onclick="addToCart('Island Breeze', 40000)">Book Now</button>
+                            </div>
+                            
+                        </div>
+                    
+                        <div class="packageSlide">
+                            <div class="numbertext">4 / 4</div>
+                            <img class="package-img" src="img/4.jpg" style="width:100%">
+                            <div class="desc">
+                                <h4>Jamaican Oasis</h4>
+                                <p>Hike to majestic waterfalls and swim in natural pools surrounded by 
+                                    lush tropical vegetation.<br>
+                                    Price: $45,000 JMD
+                                </p> 
+                                <button class="btn" onclick="addToCart('Jamaican Oasis', 45000)">Book Now</button>
+                            </div>
+                        </div>
+                    
+                        <a class="prev">&#11164</a>
+                        <a class="next">&#11166</a>
+
                     </div>
-                </section>
+                    
+                    <br>
+                    <div style="text-align:center">
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span>
+                    </div>
+                </div>
+            </section>
 
                 <section class="testimonials">
                     <h2 class="heading">Testimonials</h2>
                     <div class="testimonial">
-                        <p>"Paradise Pathways made my vacation unforgettable! The service was excellent, and the destinations were breathtaking."<br> 
-                        - Sarah Johnson</p>
-                        
+                        <div> 
+                <p>"Paradise Pathways made my vacation unforgettable! The service was excellent, and the destinations were breathtaking."<br> 
+                         - Sarah Johnson</p>
                         <p>"Everything was perfectly organized, from start to finish. I felt safe, relaxed, and completely immersed in the beauty of Jamaica!"<br>
-                        — Mark Thompson</p>  
-                        
+                        — Mark Thompson</p> 
+                    </div> 
+                        <div> 
                         <p>"The best travel experience I've ever had! The team at Paradise Pathways took care of every detail, making my trip stress-free and enjoyable."<br>
                         — Emily Roberts</p>  
                         
                         <p>"Highly recommend! The booking process was smooth, and the entire trip exceeded my expectations. I can’t wait to book again!"<br> 
                         — James Carter</p>  
-
-                        <p>"From the stunning beaches to the thrilling excursions, every moment was magical. Thank you for an amazing experience!"<br> 
-                        — Olivia Martinez</p>   
-
-                        <p>"I never thought a trip could be this perfect. The guides were knowledgeable, the accommodations were excellent, and the scenery was breathtaking."<br>
-                        — David Wilson</p>  
-
-                        <p>"A dream vacation come true! I discovered places I never knew existed, and the service was top-notch."<br>
-                        — Jessica Brown</p>
+                        </div> 
                     </div>
                 </section>
             </div>
@@ -187,5 +176,16 @@
 
         <div class="copyright"> &copy;All Rights Reserved</div>
         </footer>
-    </body>
+        <script>
+            function addToCart(packageName, price) {
+              let cart = JSON.parse(localStorage.getItem("cart")) || [];
+              cart.push({ name: packageName, price: price, quantity: 1 });
+              localStorage.setItem("cart", JSON.stringify(cart));
+              alert(packageName + " added to cart!");
+            }
+          </script>
+          <script src="script.js"></script>
+          </body>
+          
+    </body>
 </html>
