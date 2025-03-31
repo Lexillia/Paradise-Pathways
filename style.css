@@ -203,6 +203,8 @@ article{
 
 /*Footer*/
 footer{
+    bottom: 0;
+    width: 100%;
     background-color: black;
     color: white;
 }
@@ -482,9 +484,8 @@ footer{
 
 /* Cart */
 .main-container {
-    height: 100vh;
     width: 100%;
-    margin: auto;
+    margin-bottom: 10%;
     padding: 20px;
     text-align: center;
 }
