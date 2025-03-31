@@ -1,57 +1,64 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Paradise Pathways</title>
-  <link rel="icon" href="img/icon.png">
-</head>
-<body>
-  <script src="script.js"></script>
-  <header>
-    <div class="navtop">
-      <div class="logo">
-        <a href="index.html"><img src="img/Paradise Pathways Logo.png" width="50px"></a>
-      </div>
-      <button class="menu-btn">&#8801;</button>
-      <nav class="navbar" id="barNav">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="package.html">Package</a></li>
-          <li><a class="current" href="blog.html">Blog</a></li>
-          <li><a href="cart.html">Cart</a></li>
-          <li>
-            <div class="dropdown">
-              <button class="dropbtn">User &#11206;</button>
-              <div class="dropdown-content">
-                <a href="sign-up.html">Sign Up</a>
-                <a href="login.html">Log In</a>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Paradise Pathways</title>
+    <link rel="icon" href="img/icon.png">
+  </head>
+
+  <body>
+    <script src="script.js"></script>
+    <header>
+      <div class="navtop">
+        <div class="logo">
+          <a href="index.html"><img src="img/Paradise Pathways Logo.png" width="50px"></a>
+        </div>
+        <button class="menu-btn">&#8801;</button>
+        <nav class="navbar" id="barNav">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="package.html">Package</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li>
+              <div class="dropdown">
+                <button class="dropbtn">User &#11206;</button>
+                <div class="dropdown-content">
+                  <a href="sign-up.html">Sign In</a>
+                  <a href="login.html">Log In</a>
+                </div>
               </div>
-            </div>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <div class="form-container">
-    <p class="welcome-text">Welcome back to Paradise Pathways! Please enter your login credentials below. Your information is confidential and secure.</p>
-    <h3>Log In</h3>
-    <form action="action_page.php" method="post">
-      <label>Email:</label>
-      <input type="email" placeholder="Enter your email" required>
-      <label>Password:</label>
-      <input type="password" placeholder="Enter your password" required>
-      <a href="forgot-pswd.html" class="forgot-link">Forgot Password?</a>
-      <div class="remember-me">
-        <input type="checkbox" id="remember">
-        <label for="remember">Remember Me</label>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <button class="form-button" type="submit">Log In</button>
-      <p>Don't have an account? <a href="sign-up.html">Sign up</a></p>
-    </form>
-  </div>
-</body>
+    </header>
+
+    <video class="form-video" autoplay muted loop>
+      <source src="img/shell beach.mp4" type="video/mp4">
+  </video>
+
+    <div class="form-container">
+      <p class="welcome-text">Welcome back to Paradise Pathways! Please enter your login credentials below. Your information is confidential and secure.</p>
+      <h3>Log In</h3>
+      <form action="action_page.php" method="post">
+        <label>Email:</label>
+        <input type="email" placeholder="Enter your email" required>
+        <label>Password:</label>
+        <input type="password" placeholder="Enter your password" required>
+        <a href="forgot-pswd.html" class="links">Forgot Password?</a>
+        <div class="remember-me">
+          <input type="checkbox" id="remember">
+          <label for="remember">Remember Me</label>
+        </div>
+        <button class="form-button" type="submit">Log In</button>
+        <p>Don't have an account? <a href="sign-up.html" class="links">Sign up</a></p>
+      </form>
+    </div>
+
+  </body>
 </html>
 
