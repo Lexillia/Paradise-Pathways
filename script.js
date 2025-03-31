@@ -5,20 +5,23 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // Global Functions (Runs on Every Page) //
     function globalFunctions() {
-        console.log("Global scripts running...");
+        console.log("Global scripts running");
         // Highlight active nav link
         let menuBtn = document.querySelector(".menu-btn");
         let navLinks = document.querySelector(".nav-links");
 
-        menuBtn.addEventListener("click", function () {
-            navLinks.classList.toggle("active");
-    });
-
+        if (menuBtn && navLinks) {
+            menuBtn.addEventListener("click", function () {
+                navLinks.classList.toggle("active");
+                console.log("Menu button clicked!"); 
+            });
+        } 
+        else {
+            console.warn("Menu button or nav links not found.");
+        }
     
+    };
     
-
-    }
-
     //Page-Specific Scripts //
     if (currentPage === "index.html" || currentPage === "") {
         homePageScripts();
@@ -29,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //Home Page Scripts //
     function homePageScripts() {
-        console.log("Running scripts for Home Page...");
+        console.log("Running scripts for Home Page");
         
         let slideIndex = 1;
         showSlides(slideIndex);
