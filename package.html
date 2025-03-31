@@ -11,7 +11,6 @@
     </head>
 
     <body>
-        <script src="script.js"></script>
         <header>
             <!--header containing logo, navbar and dropdown menu for user options-->
             <div class="navtop">
@@ -42,7 +41,7 @@
 
         <title>Travel Packages | Paradise Pathways</title>
 
-        <main class="main-container">
+        <main class="package-container">
             <h2>🌴 Our Travel Packages 🌴</h2>
             <div class="packages">
                 <div class="package">
@@ -73,6 +72,47 @@
                     <p><strong>Contact for Pricing</strong></p>
                     <button class="btn" onclick="addToCart('Wedding', )">Learn More</button>
                 </div>
+
+                <div class="package">
+                    <img src="img/dunns-river.jpg" alt="Dunn's river falls">
+                    <h3>Climb the Falls</h3>
+                    <p>Climb and play in the breathtaking Duns River Falls,
+                        one of Jamaica's most stunning natural wonders.</p>
+                    <p><strong>$6,000 per trip</strong></p>
+                    <button class="btn" onclick="addToCart('Dunn\'s River Tour', 6000)">Add to Cart</button>
+                </div>
+                <div class="package">
+                    <img src="img/1.jpg" alt="Golf">
+                    <h3>Golf Jamaican Style</h3>
+                    <p>Unwind on Jamaica's world-class golf courses surrounded by 
+                        lush tropical landscapes.
+                    </p>
+                    <p><strong>$25,000 per trip</strong></p>
+                    <button class="btn" onclick="addToCart('Golf Jamaican Style', 25000)">Add to Cart</button>
+                </div>
+                <div class="package">
+                    <img src="img/2.jpg" alt="Reef Explorer">
+                    <h3>Reef Explorer</h3>
+                    <p>Reliable and comfortable private transportation.</p>
+                    <p><strong>$5,000 per trip</strong></p>
+                    <button class="btn" onclick="addToCart('Reef Explorer', 35000)">Add to Cart</button>
+                </div>
+                <div class="package">
+                    <img src="img/3.jpg" alt="Island Breeze">
+                    <h3>🚗 Airport Transfers</h3>
+                    <p>Sail across Jamaica's crystal-clear waters and enjoy breathtaking 
+                        views of the coastline.</p>
+                    <p><strong>$40,000 per trip</strong></p>
+                    <button class="btn" onclick="addToCart('Island Breeze', 40000)">Add to Cart</button>
+                </div>
+                <div class="package">
+                    <img src="img/4.jpg" alt="Jamaican Oasis">
+                    <h3>Jamaican Oasis</h3>
+                    <p>Hike to majestic waterfalls and swim in natural pools surrounded by 
+                        lush tropical vegetation.</p>
+                    <p><strong>$45,000 per trip</strong></p>
+                    <button class="btn" onclick="addToCart('Jamaican Oasis', 45000)">Add to Cart</button>
+                </div>
             </div>
         </main>
 
@@ -88,7 +128,8 @@
 
             <div class="copyright"> &copy;All Rights Reserved</div>
         </footer>
-
+        
+        <script src="script.js"></script>
         <script>
             function addToCart(packageName, price) {
                 let cart = JSON.parse(localStorage.getItem("cart")) || [];
