@@ -378,7 +378,6 @@ footer{
 }
 
 .video-background video{
-    height: 100vh;
     object-fit: cover;
     border-radius: 20px;
 }
